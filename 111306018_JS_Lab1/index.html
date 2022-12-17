@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript">
+        var input1=window.prompt("enter first integer:");
+        var input2=window.prompt("enter second integer:");
+        if(input1>input2){
+            document.body.style.backgroundColor="lightblue" ;
+            document.write("firstInput>secondInput");}
+
+        else if(input2>input1){
+            document.body.style.backgroundColor="lightgreen" ;
+            document.write("secondInput > firstInput");}
+        else if(input1==input2){
+            document.body.style.backgroundColor="lightyellow" ;
+            document.write("secondInput == firstInput");}
+        
+    </script>
+    <input type="button" value="1st button" onClick="alert(input1)">
+    <input type="button" value="2nd button" onClick="alert(input2)">
+
+</body>
+</html>
