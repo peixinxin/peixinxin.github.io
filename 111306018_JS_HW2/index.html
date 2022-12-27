@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<body>
+    <div id="block">
+        <h2 class="header" align="center">JS Calculator</h2>
+        <form>
+            <center><label>Number1</label></center>
+            <center><input type="number" id="num1" class="input_box" ></center><br>
+            <center><label>Number2</label></center>
+            <center><input type="number" id="num2" class="input_box"></center><br>
+            <center><label>Calculation</label></center>
+           <center> <select id="operate" name="method" style="width: 170px;height:25px;"></center>
+                <option value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">x</option>
+                <option value="3">/</option>
+            </select><br>  
+        </form>
+        <center><p><input type="button" value="Count" class="cal_button" onclick="calculator() " style="width: 170px;height: 25px;;background-color: rgb(216, 166, 73);border:none;"></p></center>
+        <center><p>Result =<span id="result"></span></p></center>
+    </div>
+    <script type="text/javascript">
+        function calculator(){
+            var n1=parseInt(document.getElementById("num1").value);
+            var n2=parseInt(document.getElementById("num2").value);
+            var operator=parseInt(document.getElementById("operate").value);
+            if(operator==0){
+                document.getElementById("result").innerHTML=add(n1,n2);
+            }else if(operator==1){
+                document.getElementById("result").innerHTML=minus(n1,n2);
+            }else if(operator==2){
+                document.getElementById("result").innerHTML=multiply(n1,n2);
+            }else {
+                document.getElementById("result").innerHTML=divide(n1,n2);
+            }
+        }
+        function add(num1,num2){
+            return num1+num2;
+        }
+        function minus(num1,num2){
+            return num1-num2;
+        }
+        function multiply(num1,num2){
+            return num1*num2;
+        }
+        function divide(num1,num2){
+            return num1/num2;
+        }
+    
+    </script>
+</body>
+
+</html>
